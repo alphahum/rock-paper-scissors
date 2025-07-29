@@ -1,5 +1,7 @@
-let humanscore = 0;
-let computerscore = 0;
+function playGame() {
+
+ let humanscore = 0;
+ let computerscore = 0;
 
 function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * 3);
@@ -37,8 +39,29 @@ function playRound( humanChoice, computerChoice ) {
                 computerscore++;
             }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+for ( let i = 1; i <= 5; i++) {
+    console.log(`Round ${i}`);
+    const human = getHumanChoice();
+    const computer =getComputerChoice();
+    playRound (human, computer);
+}
+
+console.log("\nFinal Score:");
+console.log(`You: ${humanscore} | Computer: ${computerscore}`);
+
+if (humanscore > computerscore) {
+    console.log ("You win the game!");
+}
+else if (humanscore < computerscore) {
+    console.log ("You lose the game!");
+}
+else {
+    console.log ("It's a tie game!");
+}
+
+}
+
+playGame();
+
 
