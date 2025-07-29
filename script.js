@@ -51,10 +51,10 @@ console.log("\nFinal Score:");
 console.log(`You: ${humanscore} | Computer: ${computerscore}`);
 
 if (humanscore > computerscore) {
-    console.log ("You win the game!");
+    console.log ("You won the game!");
 }
 else if (humanscore < computerscore) {
-    console.log ("You lose the game!");
+    console.log ("You lost the game!");
 }
 else {
     console.log ("It's a tie game!");
