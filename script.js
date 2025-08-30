@@ -4,6 +4,7 @@ function playGame() {
     let gameOver = false;
 
     const results = document.querySelector("#results");
+    const resetButton = document.querySelector("#reset");
 
     function getComputerChoice() {
         const choices = ["rock", "paper", "scissors"];
@@ -21,9 +22,11 @@ function playGame() {
         if (humanScore === 5) {
             displayMessage(`🎉 You won the game! Final score: ${humanScore} - ${computerScore}`);
             gameOver = true;
+            document.querySelector("#reset").style.display = "block";
         } else if (computerScore === 5) {
             displayMessage(`😢 You lost the game! Final score: ${humanScore} - ${computerScore}`);
             gameOver = true;
+            document.querySelector("#reset").style.display = "block";
         }
     }
 
@@ -53,6 +56,15 @@ function playGame() {
     document.querySelector("#rock").addEventListener("click", () => playRound("rock"));
     document.querySelector("#paper").addEventListener("click", () => playRound("paper"));
     document.querySelector("#scissors").addEventListener("click", () => playRound("scissors"));
+
+    resetButton.addEventListener(("click"), () => {
+        humanScore = 0;
+        computerScore = 0;
+        gameOver = false;
+        results.innerHTML = "";
+        resetButton.style.display = "none";
+        displayMessage("Game reset! Let's play again 🎮");
+    })
 }
 
 playGame();
