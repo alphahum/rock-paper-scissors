@@ -1,0 +1,60 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- Buttons --- */
+#button {
+  display: flex;
+  gap: 15px;
+}
+
+#button button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #4a90e2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+#button button:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+#button button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Results Box --- */
+#results {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 350px;
+  height: 220px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #fff;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
+}
