@@ -58,3 +58,12 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   line-height: 1.5;
 }
+
+.instructions {
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  color: #666;
+  margin-top: -19px;
+  margin-bottom: 20px;
+}
