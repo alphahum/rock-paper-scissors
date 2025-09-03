@@ -5,6 +5,8 @@ function playGame() {
 
     const results = document.querySelector("#results");
     const resetButton = document.querySelector("#reset");
+    const humanScoreSpan = document.querySelector("#human-score");
+    const computerScoreSpan = document.querySelector("#computer-score");
 
     function getComputerChoice() {
         const choices = ["rock", "paper", "scissors"];
@@ -15,7 +17,7 @@ function playGame() {
         const p = document.createElement("p");
         p.textContent = message;
         results.appendChild(p);
-        results.scrollTop = results.scrollHeight; // auto-scroll
+        results.scrollTop = results.scrollHeight;
     }
 
     function declareWinner() {
@@ -28,6 +30,11 @@ function playGame() {
             gameOver = true;
             document.querySelector("#reset").style.display = "block";
         }
+    }
+
+    function updateScoreBoard() {
+        humanScoreSpan.textContent = humanScore
+        computerScoreSpan.textContent = computerScore
     }
 
     function playRound(humanChoice) {
@@ -50,9 +57,10 @@ function playGame() {
         }
 
         declareWinner();
+        updateScoreBoard();
     }
 
-    // Event listeners
+    
     document.querySelector("#rock").addEventListener("click", () => playRound("rock"));
     document.querySelector("#paper").addEventListener("click", () => playRound("paper"));
     document.querySelector("#scissors").addEventListener("click", () => playRound("scissors"));
