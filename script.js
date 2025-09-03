@@ -71,6 +71,7 @@ function playGame() {
         gameOver = false;
         results.innerHTML = "";
         resetButton.style.display = "none";
+        updateScoreBoard();
         displayMessage("Game reset! Let's play again 🎮");
     })
 }
