@@ -1,3 +1,17 @@
-## Rock Paper Scissors Game
+# 🎮 Rock Paper Scissors Game
 
-This Rock Paper Scissors game is a simple JavaScript project designed to be played entirely in the console. The game uses only the built-in `prompt` function to receive user input, The game pits the user against a computer opponent that randomly selects between “rock”, “paper”, or “scissors.” The player and computer choices are evaluated over 5 rounds, with scores tracked and a winner announced at the end. and all gameplay takes place within the browser's console environment.
+A simple browser-based **Rock, Paper, Scissors** game built with **HTML, CSS, and JavaScript**.  
+Play against the computer, keep track of your running score, and be the first to reach 5 points to win the game!  
+
+---
+
+## 🚀 Features
+- 🪨 Choose **Rock**, 📄 **Paper**, or ✂️ **Scissors**  
+- 🤖 Play against a computer with random choices  
+- 📊 Live **scoreboard** updates after every round  
+- 🏆 First to 5 points wins the game  
+- 🔄 **Reset button** to play again without reloading the page  
+- 📝 Game log shows round results with auto-scroll  
+
+---
+
